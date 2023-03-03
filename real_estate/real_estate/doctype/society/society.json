@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:society_name",
+ "creation": "2022-12-08 15:18:34.368030",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "society_name",
+  "society_abbr"
+ ],
+ "fields": [
+  {
+   "fieldname": "society_name",
+   "fieldtype": "Data",
+   "label": "Society Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "society_abbr",
+   "fieldtype": "Data",
+   "label": "Society Abbr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-23 14:45:45.195125",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Society",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

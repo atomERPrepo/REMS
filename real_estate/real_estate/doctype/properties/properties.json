@@ -1,0 +1,454 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-02-23 15:14:17.972750",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "identification_section",
+  "property_type",
+  "society",
+  "plot_name",
+  "society_abbr",
+  "name1",
+  "naming",
+  "building",
+  "billing_item",
+  "billing_group",
+  "category",
+  "unit_type",
+  "street_no",
+  "column_break_7",
+  "company",
+  "cost_center",
+  "district",
+  "district_abbr",
+  "phase",
+  "floor",
+  "property_facing",
+  "property_nature",
+  "unit_characteristics_section",
+  "unit_owner",
+  "title_deed_number",
+  "master_bedroom",
+  "column_break_15",
+  "cnic",
+  "title_deed_date",
+  "bedroom",
+  "unit_details_section",
+  "building_code",
+  "builtup_area",
+  "area_ft",
+  "area_marla",
+  "area_sqy",
+  "east",
+  "north",
+  "front",
+  "side_1",
+  "extra_land_marla",
+  "column_break_23",
+  "covered_area",
+  "size",
+  "status",
+  "floor_code",
+  "west",
+  "south",
+  "rear",
+  "side_2",
+  "extra_land_yd",
+  "common_bathroom",
+  "more_information_section",
+  "unit_assets",
+  "column_break_29",
+  "property_amenity",
+  "building_abbr",
+  "floor_abbr",
+  "phase_abbr"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "identification_section",
+   "fieldtype": "Section Break",
+   "label": "IDENTIFICATION"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Property Type",
+   "options": "\nPlot\nApartment"
+  },
+  {
+   "default": "Samana Smart City",
+   "fieldname": "society",
+   "fieldtype": "Link",
+   "label": "Society",
+   "options": "Society"
+  },
+  {
+   "depends_on": "eval:doc.property_type == \"Plot\"",
+   "fieldname": "plot_name",
+   "fieldtype": "Data",
+   "label": "Plot Name"
+  },
+  {
+   "fetch_from": "society.society_abbr",
+   "fieldname": "society_abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Society Abbr"
+  },
+  {
+   "depends_on": "eval:doc.property_type==\"Apartment\"",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "naming",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Naming",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "depends_on": "eval:doc.property_type==\"Apartment\"",
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "label": "Building",
+   "options": "Building"
+  },
+  {
+   "fieldname": "billing_item",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Billing Item"
+  },
+  {
+   "fetch_from": "building.building_name",
+   "fieldname": "billing_group",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Billing Group"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Category"
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Unit Type",
+   "options": "\nCommercial\nResidential"
+  },
+  {
+   "fieldname": "street_no",
+   "fieldtype": "Data",
+   "label": "Street No"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fetch_from": "district.district_abbr",
+   "fieldname": "district_abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "District Abbr"
+  },
+  {
+   "fieldname": "phase",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Phase",
+   "options": "Phase"
+  },
+  {
+   "depends_on": "eval:doc.property_type==\"Apartment\"",
+   "fieldname": "floor",
+   "fieldtype": "Link",
+   "label": "Floor",
+   "options": "Floor"
+  },
+  {
+   "fieldname": "property_facing",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Property Facing"
+  },
+  {
+   "fieldname": "property_nature",
+   "fieldtype": "Select",
+   "label": "Property Nature",
+   "options": "\nCommercial\nResidential"
+  },
+  {
+   "fieldname": "unit_characteristics_section",
+   "fieldtype": "Section Break",
+   "label": "Ownership Details"
+  },
+  {
+   "fieldname": "unit_owner",
+   "fieldtype": "Link",
+   "label": "Unit Owner",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "title_deed_number",
+   "fieldtype": "Data",
+   "label": "Title deed number"
+  },
+  {
+   "fieldname": "master_bedroom",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Master bedroom"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cnic",
+   "fieldtype": "Data",
+   "label": "CNIC"
+  },
+  {
+   "fieldname": "title_deed_date",
+   "fieldtype": "Date",
+   "label": "Title deed date"
+  },
+  {
+   "fieldname": "bedroom",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Bedroom"
+  },
+  {
+   "fieldname": "unit_details_section",
+   "fieldtype": "Section Break",
+   "label": "UNIT DETAILS"
+  },
+  {
+   "fieldname": "building_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Building Code"
+  },
+  {
+   "fieldname": "builtup_area",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Builtup Area(SQYRDs)"
+  },
+  {
+   "fieldname": "area_ft",
+   "fieldtype": "Float",
+   "label": "Area (Sq. Ft)"
+  },
+  {
+   "fieldname": "area_marla",
+   "fieldtype": "Float",
+   "label": "Area (Marla) @ 250 Sq. Ft"
+  },
+  {
+   "fieldname": "area_sqy",
+   "fieldtype": "Float",
+   "label": "Area (Sq. Yds)"
+  },
+  {
+   "fieldname": "east",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "East"
+  },
+  {
+   "fieldname": "north",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "North"
+  },
+  {
+   "fieldname": "front",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Front"
+  },
+  {
+   "fieldname": "side_1",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Side 1"
+  },
+  {
+   "fieldname": "extra_land_marla",
+   "fieldtype": "Data",
+   "label": "Extra land (marla)"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "covered_area",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Covered Area"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size/Dimensions"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Available\nBooked\nCommon Area (Not for lease)\nManaged for Customer\nOff Lease in 3 Months\nOn Lease\nOn Sale\nRemoved\nRenewal\nSold\nVacating\nOn lease"
+  },
+  {
+   "fieldname": "floor_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Floor Code"
+  },
+  {
+   "fieldname": "west",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "West"
+  },
+  {
+   "fieldname": "south",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "South"
+  },
+  {
+   "fieldname": "rear",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Rear"
+  },
+  {
+   "fieldname": "side_2",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Side 2"
+  },
+  {
+   "fieldname": "extra_land_yd",
+   "fieldtype": "Data",
+   "label": "Extra Land Sq.Yds"
+  },
+  {
+   "fieldname": "common_bathroom",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Common bathroom"
+  },
+  {
+   "fieldname": "more_information_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "MORE INFORMATION"
+  },
+  {
+   "fieldname": "unit_assets",
+   "fieldtype": "Table",
+   "label": "Unit Assets",
+   "options": "Unit Assets"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property_amenity",
+   "fieldtype": "Table",
+   "label": "Property Amenity",
+   "options": "Property Amenity"
+  },
+  {
+   "fetch_from": "building.building_abbr",
+   "fieldname": "building_abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Building_Abbr"
+  },
+  {
+   "fetch_from": "floor.floor_abbr",
+   "fieldname": "floor_abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Floor_Abbr"
+  },
+  {
+   "fetch_from": "phase.phase_abbr",
+   "fieldname": "phase_abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Phase Abbr"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-02-23 15:14:17.972750",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Properties",
+ "name_case": "Title Case",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

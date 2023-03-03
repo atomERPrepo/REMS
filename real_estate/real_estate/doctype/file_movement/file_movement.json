@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:File-{file_name}-{###}",
+ "creation": "2023-02-21 18:41:06.520591",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "file_name",
+  "cabinet_no",
+  "column_break_4",
+  "entry_type",
+  "issued_to",
+  "date",
+  "section_break_10",
+  "reason",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "file_name",
+   "fieldtype": "Link",
+   "label": "File Name",
+   "options": "Physical File",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "file_name.cabinet_no",
+   "fieldname": "cabinet_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cabinet No",
+   "options": "Cabinet",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.entry_type==\"Issue\"",
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.entry_type==\"Issue\"",
+   "fieldname": "issued_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Issued To",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "File Movement",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "entry_type",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nIssue\nReturn",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-03-01 12:23:09.182390",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "File Movement",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

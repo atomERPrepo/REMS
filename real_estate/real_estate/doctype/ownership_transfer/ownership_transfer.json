@@ -1,0 +1,290 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2022-12-02 18:42:37.052037",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "booking_form_no",
+  "floor",
+  "builtup_area",
+  "area_yd",
+  "category",
+  "column_break_4",
+  "property_id",
+  "size",
+  "building",
+  "type",
+  "property_nature",
+  "current_owner_section",
+  "unit_owner",
+  "cnic",
+  "amended_from",
+  "column_break_12",
+  "father_name",
+  "title_deed_number",
+  "title_deed_date",
+  "section_break_16",
+  "all_dues_clear",
+  "selling_price",
+  "balance_dues",
+  "transfer_fee_status",
+  "paid",
+  "transfer_fee",
+  "column_break_23",
+  "any_dispute",
+  "remarks",
+  "transfer_to_section",
+  "new_owner",
+  "title_deed_date_",
+  "column_break_29",
+  "cnic_",
+  "title_deed_number_",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "booking_form_no",
+   "fieldtype": "Link",
+   "label": "Registration No",
+   "options": "Sales Order"
+  },
+  {
+   "fetch_from": "property_id.floor",
+   "fieldname": "floor",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Floor"
+  },
+  {
+   "fetch_from": "property_id.builtup_area",
+   "fieldname": "builtup_area",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Builtup Area(SQYRDs)"
+  },
+  {
+   "fetch_from": "property_id.area_sqy",
+   "fieldname": "area_yd",
+   "fieldtype": "Data",
+   "label": "Area Yd"
+  },
+  {
+   "fetch_from": "property_id.category",
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Category"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "booking_form_no.property_id",
+   "fieldname": "property_id",
+   "fieldtype": "Link",
+   "label": "Property Id",
+   "options": "Properties"
+  },
+  {
+   "fetch_from": "property_id.size",
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size/Dimensions"
+  },
+  {
+   "fetch_from": "property_id.building",
+   "fieldname": "building",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Building",
+   "options": "Building"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Type"
+  },
+  {
+   "fetch_from": "property_id.property_nature",
+   "fieldname": "property_nature",
+   "fieldtype": "Select",
+   "label": "Property Nature",
+   "options": "\nCommercial\nResidential"
+  },
+  {
+   "fieldname": "current_owner_section",
+   "fieldtype": "Section Break",
+   "label": "Current Owner"
+  },
+  {
+   "fetch_from": "property_id.unit_owner",
+   "fieldname": "unit_owner",
+   "fieldtype": "Link",
+   "label": "Unit Owner",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "property_id.cnic",
+   "fieldname": "cnic",
+   "fieldtype": "Data",
+   "label": "CNIC"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ownership Transfer",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Father Name"
+  },
+  {
+   "fetch_from": "property_id.title_deed_number",
+   "fieldname": "title_deed_number",
+   "fieldtype": "Data",
+   "label": "Title Deed Number"
+  },
+  {
+   "fetch_from": "property_id.title_deed_date",
+   "fieldname": "title_deed_date",
+   "fieldtype": "Data",
+   "label": "Title Deed Date"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "all_dues_clear",
+   "fieldtype": "Data",
+   "label": "All Dues Clear"
+  },
+  {
+   "fieldname": "selling_price",
+   "fieldtype": "Data",
+   "label": "Selling Price"
+  },
+  {
+   "fieldname": "balance_dues",
+   "fieldtype": "Data",
+   "label": "Balance Dues"
+  },
+  {
+   "fieldname": "transfer_fee_status",
+   "fieldtype": "Select",
+   "label": "Transfer Fee Status",
+   "options": "\nPaid\nUnpaid"
+  },
+  {
+   "fieldname": "paid",
+   "fieldtype": "Data",
+   "label": "Paid"
+  },
+  {
+   "fieldname": "transfer_fee",
+   "fieldtype": "Data",
+   "label": "Transfer Fee"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "any_dispute",
+   "fieldtype": "Select",
+   "label": "Any Dispute",
+   "options": "\nNil\nYes"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "transfer_to_section",
+   "fieldtype": "Section Break",
+   "label": "Transfer To"
+  },
+  {
+   "fieldname": "new_owner",
+   "fieldtype": "Link",
+   "label": "New Owner",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "title_deed_date_",
+   "fieldtype": "Data",
+   "label": "Title Deed Date"
+  },
+  {
+   "fieldname": "column_break_29",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "new_owner.cnic_",
+   "fieldname": "cnic_",
+   "fieldtype": "Data",
+   "label": "CNIC"
+  },
+  {
+   "fieldname": "title_deed_number_",
+   "fieldtype": "Data",
+   "label": "Title Deed Number"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "SSC-OT-.YYYY.-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-02-23 14:41:45.439454",
+ "modified_by": "Administrator",
+ "module": "Real Estate",
+ "name": "Ownership Transfer",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
