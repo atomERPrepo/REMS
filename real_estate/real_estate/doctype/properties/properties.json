@@ -172,7 +172,6 @@
   {
    "fieldname": "cost_center",
    "fieldtype": "Link",
-   "hidden": 1,
    "label": "Cost Center",
    "options": "Cost Center"
   },
@@ -427,7 +426,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-23 15:14:17.972750",
+ "modified": "2023-03-08 13:08:30.926150",
  "modified_by": "Administrator",
  "module": "Real Estate",
  "name": "Properties",
