@@ -71,31 +71,31 @@
    "options": "Properties"
   },
   {
-   "fetch_from": "registration_no.category",
+   "fetch_from": "property_id.category",
    "fieldname": "category",
    "fieldtype": "Data",
    "label": "Category"
   },
   {
-   "fetch_from": "registration_no.area_marla",
+   "fetch_from": "property_id.size",
    "fieldname": "area_marla",
    "fieldtype": "Data",
    "label": "Size of Plot"
   },
   {
-   "fetch_from": "registration_no.district",
+   "fetch_from": "property_id.district",
    "fieldname": "district",
    "fieldtype": "Data",
    "label": "District"
   },
   {
-   "fetch_from": "registration_no.plot_name",
+   "fetch_from": "property_id.plot_name",
    "fieldname": "plot_no",
    "fieldtype": "Data",
    "label": "Plot No"
   },
   {
-   "fetch_from": "registration_no.street_no",
+   "fetch_from": "property_id.street_no",
    "fieldname": "street_no",
    "fieldtype": "Data",
    "label": "Street No"
@@ -192,14 +192,14 @@
    "fieldname": "merge_from",
    "fieldtype": "Link",
    "label": "Merge From",
-   "options": "Proper"
+   "options": "Properties"
   },
   {
    "depends_on": "eval:doc.request_type==\"Request For Merger\"",
    "fieldname": "merge_into",
    "fieldtype": "Link",
    "label": "Merge Into",
-   "options": "Proper"
+   "options": "Properties"
   },
   {
    "fieldname": "section_break_29",
@@ -233,7 +233,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-27 13:20:45.706238",
+ "modified": "2023-03-03 15:28:15.595181",
  "modified_by": "Administrator",
  "module": "Real Estate",
  "name": "Requests",
