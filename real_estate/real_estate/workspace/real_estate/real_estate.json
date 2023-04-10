@@ -18,8 +18,66 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Master",
+   "link_count": 5,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Society",
+   "link_count": 0,
+   "link_to": "Society",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "District",
+   "link_count": 0,
+   "link_to": "District",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Properties",
+   "link_count": 0,
+   "link_to": "Properties",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Building",
+   "link_count": 0,
+   "link_to": "Building",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Floor",
+   "link_count": 0,
+   "link_to": "Floor",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Reports",
-   "link_count": 6,
+   "link_count": 8,
    "onboard": 0,
    "type": "Card Break"
   },
@@ -86,43 +144,25 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Master",
-   "link_count": 3,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Property",
+   "label": "Ownership Transfers",
    "link_count": 0,
-   "link_to": "Properties",
-   "link_type": "DocType",
+   "link_to": "Transfer History",
+   "link_type": "Report",
    "onboard": 0,
    "type": "Link"
   },
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Building",
+   "label": "Customer Installment Report",
    "link_count": 0,
-   "link_to": "Building",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Floor",
-   "link_count": 0,
-   "link_to": "Floor",
-   "link_type": "DocType",
+   "link_to": "Customer Installment Status Report",
+   "link_type": "Report",
    "onboard": 0,
    "type": "Link"
   }
  ],
- "modified": "2023-03-02 15:33:13.747138",
+ "modified": "2023-03-31 11:40:49.332879",
  "modified_by": "Administrator",
  "module": "Real Estate",
  "name": "Real Estate",

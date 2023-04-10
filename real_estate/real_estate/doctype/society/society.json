@@ -8,7 +8,10 @@
  "engine": "InnoDB",
  "field_order": [
   "society_name",
-  "society_abbr"
+  "society_abbr",
+  "column_break_3",
+  "location",
+  "cost_center"
  ],
  "fields": [
   {
@@ -21,11 +24,26 @@
    "fieldname": "society_abbr",
    "fieldtype": "Data",
    "label": "Society Abbr"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-23 14:45:45.195125",
+ "modified": "2023-03-24 09:16:54.764416",
  "modified_by": "Administrator",
  "module": "Real Estate",
  "name": "Society",

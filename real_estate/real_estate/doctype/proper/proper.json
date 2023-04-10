@@ -15,9 +15,8 @@
    "label": "Property Name"
   }
  ],
- "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-03 16:07:45.729559",
+ "modified": "2023-03-20 17:55:07.703494",
  "modified_by": "Administrator",
  "module": "Real Estate",
  "name": "Proper",
@@ -36,6 +35,7 @@
    "write": 1
   }
  ],
+ "read_only": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
